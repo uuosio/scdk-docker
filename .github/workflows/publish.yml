@@ -13,7 +13,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  publish-ipyeos-image:
+  publish-pscdk-image:
     runs-on: ubuntu-latest
 
     steps:
@@ -26,8 +26,8 @@ jobs:
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Build the ipyeos Docker image
+    - name: Build the pscdk Docker image
       run: |
-        docker build . --tag ghcr.io/uuosio/ipyeos:latest --tag ghcr.io/uuosio/ipyeos:v0.3.3
-        docker push ghcr.io/uuosio/ipyeos:latest
-        docker push ghcr.io/uuosio/ipyeos:v0.3.3
+        docker build . --tag ghcr.io/uuosio/pscdk:latest --tag ghcr.io/uuosio/pscdk:v0.1.0
+        docker push ghcr.io/uuosio/pscdk:latest
+        docker push ghcr.io/uuosio/pscdk:v0.1.0
