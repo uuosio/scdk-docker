@@ -28,6 +28,6 @@ jobs:
 
     - name: Build the pscdk Docker image
       run: |
-        docker build . --tag ghcr.io/uuosio/pscdk:latest --tag ghcr.io/uuosio/pscdk:v0.1.0
+        docker build . --tag ghcr.io/uuosio/pscdk:latest --tag ghcr.io/uuosio/pscdk:v0.1.1
         docker push ghcr.io/uuosio/pscdk:latest
-        docker push ghcr.io/uuosio/pscdk:v0.1.0
+        docker push ghcr.io/uuosio/pscdk:v0.1.1
