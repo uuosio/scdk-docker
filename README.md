@@ -1,29 +1,35 @@
-# PSCDK 0.1.2
+# SCDK 0.1.0
 
-## Pull the Docker Image
+## Retrieve the Docker Image
 
-To get started, pull the latest PSCDK Docker image:
+Initiate your work by obtaining the most recent SCDK Docker image:
 
-```
-docker pull ghcr.io/uuosio/pscdk:latest
-```
-
-## Run the Docker Container
-
-### Running the eosdebugger
-
-To run the `eosdebugger` in a Docker container, execute the following command:
-
-```
-docker run -it --rm -p 9090:9090 -p 9092:9092 -p 9093:9093 -t ghcr.io/uuosio/pscdk
+```bash
+docker pull ghcr.io/uuosio/scdk:latest
 ```
 
-### Running a Bash Shell
+## Launch the Docker Container
 
-To run a Bash shell in a Docker container and map the current directory to the `/work` directory, use the following command:
+### Launching the eosdebugger
 
+To activate the `eosdebugger` within a Docker container, execute the command below:
+
+```bash
+docker run -it --rm -p 9090:9090 -p 9092:9092 -p 9093:9093 -t ghcr.io/uuosio/scdk
 ```
-docker run --entrypoint bash -it --rm -p 9090:9090 -p 9092:9092 -p 9093:9093 -v "$(pwd)":/work -t ghcr.io/uuosio/pscdk
+
+## Execute the test in the current directory directly in Docker
+
+```bash
+docker run --entrypoint ipyeos -it --rm -v $(pwd):/develop -w /develop -t ghcr.io/uuosio/scdk ./test.py
 ```
 
-By using the `-v` flag, you can ensure that the current directory on your host machine is mounted to the `/work` directory in the Docker container.
+### Launching a Bash Shell
+
+To activate a Bash shell within a Docker container and map the current directory to the `/develop` directory, utilize the command below:
+
+```bash
+docker run --entrypoint bash -it --rm -v "$(pwd)":/develop -t ghcr.io/uuosio/scdk
+```
+
+By employing the `-v` flag, you can ensure that the current directory on your host machine is mounted to the `/develop` directory within the Docker container.

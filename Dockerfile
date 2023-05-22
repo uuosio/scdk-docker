@@ -14,5 +14,5 @@ ARG DEBIAN_FRONTEND=noninteractive
 #RUN apt install -y --no-install-recommends postgresql
 RUN python3.9 -m pip install -U ipyeos
 RUN python3.9 -m pip install -U pscdk
+RUN python3.9 -m pip install -U gscdk
 ENTRYPOINT ["eos-debugger", "--addr", "0.0.0.0", "--apply-request-addr", "host.docker.internal", "--rpc-server-addr", "0.0.0.0"]
-
