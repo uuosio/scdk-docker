@@ -18,8 +18,8 @@ RUN python3.9 -m pip install -U pscdk
 RUN python3.9 -m pip install -U gscdk
 
 #install golang
-RUN wget https://golang.org/dl/go1.16.7.linux-amd64.tar.gz
-RUN rm -rf /usr/local/go && tar -C /usr/local -xzf go1.16.7.linux-amd64.tar.gz
+RUN wget https://go.dev/dl/go1.20.4.linux-386.tar.gz
+RUN rm -rf /usr/local/go && tar -C /usr/local -xzf go1.20.4.linux-386.tar.gz
 RUN ln -sf /usr/local/go/bin/go /usr/local/bin/go
 
 ENTRYPOINT ["eos-debugger", "--addr", "0.0.0.0", "--apply-request-addr", "host.docker.internal", "--rpc-server-addr", "0.0.0.0"]
