@@ -28,6 +28,6 @@ jobs:
 
     - name: Build the SCDK Docker image
       run: |
-        docker build . --tag ghcr.io/uuosio/scdk:latest --tag ghcr.io/uuosio/scdk:v0.1.4
+        docker build . --tag ghcr.io/uuosio/scdk:latest --tag ghcr.io/uuosio/scdk:v0.1.5
         docker push ghcr.io/uuosio/scdk:latest
-        docker push ghcr.io/uuosio/scdk:v0.1.4
+        docker push ghcr.io/uuosio/scdk:v0.1.5

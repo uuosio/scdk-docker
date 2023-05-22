@@ -12,10 +12,10 @@ RUN python3.9 -m pip install --upgrade pip
 
 ARG DEBIAN_FRONTEND=noninteractive
 #RUN apt install -y --no-install-recommends postgresql
-RUN python3.9 -m pip install -U ipyeos
-RUN python3.9 -m pip install pyeoskit
-RUN python3.9 -m pip install -U pscdk
-RUN python3.9 -m pip install -U gscdk
+RUN python3.9 -m pip install ipyeos==0.4.0
+RUN python3.9 -m pip install pyeoskit==1.1.12
+RUN python3.9 -m pip install pscdk==0.1.2
+RUN python3.9 -m pip install gscdk==0.7.9
 
 #install golang
 RUN wget https://go.dev/dl/go1.19.9.linux-amd64.tar.gz
