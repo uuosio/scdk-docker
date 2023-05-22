@@ -1,4 +1,4 @@
-# SCDK 0.1.0
+# SCDK 0.1.2
 
 ## Retrieve the Docker Image
 
