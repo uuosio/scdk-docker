@@ -1,5 +1,5 @@
 FROM ubuntu:20.04
-LABEL org.opencontainers.image.source="https://github.com/uuosio/pscdk-docker"
+LABEL org.opencontainers.image.source="https://github.com/uuosio/scdk-docker"
 EXPOSE 9090
 EXPOSE 9092
 EXPOSE 9093
